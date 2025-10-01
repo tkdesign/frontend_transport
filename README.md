@@ -1,42 +1,53 @@
-# frontend_transport
+# Transport Management System Frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+This repository contains an example interface for transport management created using Vue.js, TypeScript, and Composition API. It demonstrates interaction with the basic functions of the server-side REST API system for managing transport orders and their waypoints.
 
-## Recommended IDE Setup
+## Project Overview
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+**Core Models:**
+- **Order:** Unique order number, customer name, date
+- **Waypoint:** Location address, type (Pickup/Delivery), linked to an order
 
-## Recommended Browser Setup
+## Features
+- **Create Transport Order:** Form to add order details and dynamically add/remove waypoints
+- **Order List:** Table displaying all orders
+- **API Integration:** Uses Axios to communicate with the backend API
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Setup Instructions
 
-## Type Support for `.vue` Imports in TS
+### Requirements
+- Node.js 22+
+- npm
+- Git
+- **Server API**: You must run the server API (Django REST Framework) from the backend repository before starting the frontend. The frontend expects the API to be available at `http://127.0.0.1:8000/` by default.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### Local Installation
+1. **Clone the repository:**
+   ```sh
+   git clone <repo-url>
+   cd frontend_transport
+   ```
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+3. **Run the development server:**
+   ```sh
+   npm run dev
+   ```
 
-## Customize configuration
+The app will be available at [http://localhost:3000/](http://localhost:3000/).
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## How to Run the App
+1. Start the backend API (see backend repository for instructions).
+2. Start the frontend as described above.
+3. Open [http://localhost:3000/](http://localhost:3000/) in your browser.
 
-## Project Setup
+## License
 
-```sh
-npm install
-```
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-### Compile and Hot-Reload for Development
+---
 
-```sh
-npm run dev
-```
+Author: Petr Kovalenko
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
