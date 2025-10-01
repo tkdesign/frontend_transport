@@ -15,7 +15,11 @@
         :items="orderStore.orders"
         :headers="headers"
         :loading="orderStore.loading"
-    />
+    >
+      <template #item.waypointsCount="{ item }">
+        {{ item.waypoints ? item.waypoints.length : 0 }}
+      </template>
+    </v-data-table>
   </v-container>
 </template>
 
@@ -29,7 +33,7 @@ const headers = [
   { text: 'Order Number', value: 'order_number' },
   { text: 'Customer', value: 'customer_name' },
   { text: 'Date', value: 'date' },
-  { text: 'Waypoints Count', value: (item: any) => item.waypoints.length }
+  { text: 'Waypoints Count', value: 'waypointsCount' }
 ]
 
 onMounted(() => {
