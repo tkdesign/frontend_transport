@@ -1,6 +1,15 @@
 <template>
   <v-container>
-    <v-btn to="/orders/create" color="primary" class="mb-4">Create Order</v-btn>
+    <v-row>
+      <v-col cols="12">
+        <h1>Orders</h1>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12">
+        <v-btn to="/orders/create" color="primary" class="mb-4">Create Order</v-btn>
+      </v-col>
+    </v-row>
 
     <v-data-table
         :items="orderStore.orders"
