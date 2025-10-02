@@ -34,7 +34,20 @@ The related backend API application can be found here:
    ```sh
    npm install
    ```
-3. **Run the development server:**
+3. **Copy the example environment file to `.env`:**
+   - On Linux/macOS:
+     ```sh
+     cp .env.example .env
+     ```
+   - On Windows (PowerShell):
+     ```powershell
+     cp .env.example .env
+     ```
+   - On Windows (cmd.exe):
+     ```cmd
+     copy .env.example .env
+     ```
+4. **Run the development server:**
    ```sh
    npm run dev
    ```
@@ -53,4 +66,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 Author: Petr Kovalenko
-
